@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heart_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heart {
+    height: 320px;
+    width: calc(11335px / 59);
+    background-image: url(imgs/flowers_frames_mini.png);
+    animation: bloom 8s 2s steps(58) forwards;
+    background-color: white;
+    background-position: 0 10px;
+    border: 7px solid rgb(255, 255, 255);
+}
+
+@keyframes bloom {
+    0% {
+        background-position: 0 10px;
+    }
+
+    100% {
+        background-position: calc((-11335px / 59) * 58) 10px;
+    }
+}
+
+@media (min-width: 320px) and (min-height: 533px) {
+
+    .heart {
+        height: 533px;
+        width: 320px;
+        background-image: url(imgs/flowers_frames.png);
+        border: 0;
+        background-position: 0 0;
+    }
+
+    @keyframes bloom {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: -18560px 0;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .heart {
+        position: relative;
+    }
+
+    .heart::after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: block;
+        height: 533px;
+        width: 320px;
+        background-image: url(imgs/bird.png);
+        content: "";
+        background-color: rgb(255, 255, 255);
+    }
+
+}
