@@ -68,6 +68,23 @@
         background-image: url(imgs/bird.png);
         content: "";
         background-color: rgb(255, 255, 255);
+        opacity: 0;
+        animation: bird 1s both;
+        ;
+    }
+
+    @keyframes bird {
+        0% {
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
 }
