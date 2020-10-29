@@ -14,7 +14,7 @@
 .heart {
     height: 320px;
     width: calc(11335px / 59);
-    background-image: url(imgs/flowers_frames_mini.png);
+    background-image: url("imgs/flowers_frames_mini.png");
     animation: bloom 8s 2s steps(58) forwards;
     background-color: white;
     background-position: 0 10px;
@@ -36,9 +36,10 @@
     .heart {
         height: 533px;
         width: 320px;
-        background-image: url(imgs/flowers_frames.png);
+        background-image: url("imgs/flowers_frames.png"), url("imgs/heart_start.png");
         border: 0;
         background-position: 0 0;
+        animation: bloom 8s 2s steps(58) forwards;
     }
 
     @keyframes bloom {
@@ -65,26 +66,10 @@
         display: block;
         height: 533px;
         width: 320px;
-        background-image: url(imgs/bird.png);
+        background-image: url("imgs/branch_start.png");
         content: "";
         background-color: rgb(255, 255, 255);
-        opacity: 0;
-        animation: bird 1s both;
-        ;
     }
 
-    @keyframes bird {
-        0% {
-            opacity: 0;
-        }
-
-        40% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
 
 }
